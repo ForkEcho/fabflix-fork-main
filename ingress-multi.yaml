@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1             # Specifies Ingress API version
+kind: Ingress                                # Defines this resource as an Ingress
+metadata:
+  name: fabflix-movies-ingress                # Names this Ingress resource
+  namespace: default                         # Places this Ingress in the 'default' namespace
+  annotations:
+    # Sticky-session affinity annotations are intentionally omitted.
+    # With Redis-backed state, ingress can distribute requests across star pods.
+    nginx.ingress.kubernetes.io/use-regex: "true"            # Enables regex matching for paths
+spec:
+  ingressClassName: nginx                     # Use 'nginx' as the Ingress controller
+  rules:
+    - http:
+        paths:
+          - path: /cs122b-project1-star/api/login
+            pathType: Prefix                  # Requests beginning with '/api/login' go here
+            backend:
+              service:
+                name: fabflix-login-service    # Name of the Service receiving traffic
+                port:
+                  number: 8080                # Service port to forward traffic to
+          - path: /cs122b-project1-star/login.*
+            pathType: ImplementationSpecific   # Implementation-specific path matching for regex
+            backend:
+              service:
+                name: fabflix-login-service
+                port:
+                  number: 8080
+          - path: /
+            pathType: Prefix                  # All other requests matching '/' go here
+            backend:
+              service:
+                name: fabflix-movies-service     # Name of the Service receiving traffic
+                port:
+                  number: 8080                # Service port to forward traffic to

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <!-- Defines a Data Source Connecting to localhost moviedbexample-->
+    <Resource name="jdbc/MySQLReadWrite"
+              auth="Container"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              type="javax.sql.DataSource"
+              username="fabflixuser"
+              password="My6$Password"
+              url="jdbc:mysql://mysql-primary:3306/moviedb?autoReconnect=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;cachePrepStmts=true"/>
+
+    <Resource name="jdbc/MySQLReadOnly"
+              auth="Container"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              type="javax.sql.DataSource"
+              username="fabflixuser"
+              password="My6$Password"
+              url="jdbc:mysql://mysql-secondary:3306/moviedb?autoReconnect=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;cachePrepStmts=true"/>
+<Environment name="redis/Address" type="java.lang.String" value="redis-service:6379"/>
+
+</Context>

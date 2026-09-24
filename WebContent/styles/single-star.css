@@ -1,0 +1,20 @@
+#movie_table thead {
+    background-color: gray;
+    color: white;
+    border-bottom: black 2px solid;
+}
+
+#movie_table tr {
+    border-bottom: black 2px solid;
+}
+
+#movie_table tr:nth-child(odd) {
+    background-color: ghostwhite;
+    color: black;
+}
+
+#movie_table tr:nth-child(even) {
+    background-color: #1f2937;
+    color: #f9faf8;
+}
+

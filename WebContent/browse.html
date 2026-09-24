@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <title>Browse</title>
+
+    <!-- CSS -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/browse.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js" defer></script>
+    <script src="scripts/browse.js" defer></script>
+    <script src="scripts/search.js" defer></script>
+</head>
+<body>
+<div id="main-nav">
+    <h1 id="main-title">Fablix</h1>
+    <div id="anchor-div">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="movie-list.html">Top Rated Movies</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    <form id="fulltext-input-div">
+        <label><input class="autocomplete" name="fulltext-title" placeholder="Enter Fulltext Title"/></label>
+        <button>Submit</button>
+    </form>
+</div>
+
+<a href="movie-list.html">Back to Movie List Page</a>
+<div id="container">
+    <h1>Browse</h1>
+    <h2 id="browse-genre-title">Browse by Genres</h2>
+    <div id="genres-grid"></div>
+
+    <h2 id="browse-movie-title">Browse by Title</h2>
+    <div id="movie-title-alphabet"></div>
+</div>
+</body>
+</html>

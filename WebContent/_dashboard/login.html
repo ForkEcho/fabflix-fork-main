@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Login to Dashboard</title>
+
+    <!-- CSS -->
+    <link href="../styles/login.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript" async defer></script>
+    <script src="scripts/login.js" defer></script>
+</head>
+<body>
+<div id="login-box">
+    <h1>Employees Login</h1>
+    <form action="#" id="login_form" method="post">
+        <input type="hidden" name="role" value="employee">
+        <label>
+            <input name="username" placeholder="Username" type="text">
+        </label>
+        <label>
+            <input name="password" placeholder="Password" type="password">
+        </label>
+        <div class="g-recaptcha" data-sitekey="6Le50mssAAAAALIrAzaM5s0PrH56p9Dh6fPSppbK"></div>
+        <input id="login-button" type="submit" value="Login">
+    </form>
+    <div id="login_error_message"></div>
+</div>
+</body>
+</html>

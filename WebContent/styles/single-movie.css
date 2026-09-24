@@ -1,0 +1,33 @@
+#movie_div div {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+#movie_div p {
+    font-weight: 600;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline;
+}
+
+ul li:not(:last-child)::after {
+    content: ", ";
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#add_to_cart_button {
+    margin-top: 25px;
+    width: 200px;
+}

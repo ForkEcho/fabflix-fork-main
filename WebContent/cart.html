@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <title>Shopping Cart</title>
+
+    <!-- CSS -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/movie-list.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js" defer></script>
+    <script src="scripts/cart.js" defer></script>
+    <script src="scripts/search.js" defer></script>
+</head>
+<body>
+<div id="main-nav">
+    <h1 id="main-title">Fablix</h1>
+    <div id="anchor-div">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="movie-list.html">Top Rated Movies</a>
+    </div>
+    <form id="fulltext-input-div">
+        <label><input class="autocomplete" name="fulltext-title" placeholder="Enter Fulltext Title"/></label>
+        <button>Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <h1>Shopping Cart</h1>
+    <table class="table table-striped" id=cart_items>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>price</th>
+            <th>quantity</th>
+            <th>price x quantity</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id=cart_items_body></tbody>
+    </table>
+    <div id="cart_total"></div>
+    <a class="btn btn-primary" href="payment.html">Proceed to Checkout</a>
+</div>
+</body>
+</html>

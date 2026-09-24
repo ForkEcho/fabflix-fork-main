@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <!-- CSS -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+    <title>Payment</title>
+    <link href="styles/styles.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js" defer></script>
+    <script src="scripts/payment.js" defer></script>
+    <script src="scripts/search.js" defer></script>
+
+</head>
+<body>
+<div id="main-nav">
+    <h1 id="main-title">Fablix</h1>
+    <div id="anchor-div">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="movie-list.html">Top Rated Movies</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    <form id="fulltext-input-div">
+        <label><input class="autocomplete" name="fulltext-title" placeholder="Enter Fulltext Title"/></label>
+        <button>Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <h1>Payment</h1>
+    <form action="#" id="payment_form" method="post">
+        <label>Card Number</label>
+        <label>
+            <input name="number" type="text">
+        </label>
+        <label>Cardholder's first name</label>
+        <label>
+            <input name="first" type="text">
+        </label>
+        <label>Cardholder's last name</label>
+        <label>
+            <input name="last" type="text">
+        </label>
+        <label>Expiration Date</label>
+        <label>
+            <input name="expiration" type="month">
+        </label>
+        <input type="submit" value="Place Order">
+        <div id="cart_total"></div>
+        <div id="payment_error_message" style="color : red "></div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          name="viewport">
+    <title>Dashboard</title>
+
+    <!-- CSS -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+    <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../styles/movie-list.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+<div id="insert_container">
+    <div>
+        <h1>Add a Star</h1>
+        <form action="#" id="star_insert" method="post">
+            <input type="hidden" name="table" value="stars">
+            <label>
+                <input name="starName" placeholder="Star Name" type="text" required>
+            </label>
+            <label>
+                <input name="birthYear" placeholder="Birth Year" type="number">
+            </label>
+            <input id="star_submit_button" type="submit" value="Add">
+        </form>
+        <div id="star_submit_error_message"></div>
+    </div>
+
+    <div>
+        <h1>Add a Movie</h1>
+        <form action="#" id="movie_insert" method="post">
+            <input type="hidden" name="table" value="movies">
+            <label>
+                <input name="movieTitle" placeholder="Title" type="text" required>
+            </label>
+            <label>
+                <input name="movieYear" placeholder="Year" type="number" required>
+            </label>
+            <label>
+                <input name="movieDirector" placeholder="Director" type="text" required>
+            </label>
+            <label>
+                <input name="movieStar" placeholder="Star" type="text" required>
+            </label>
+            <label>
+                <input name="movieGenre" placeholder="genre" type="text" required>
+            </label>
+            <input id="movie_submit_button" type="submit" value="Add" required>
+        </form>
+        <div id="movie_submit_error_message"></div>
+    </div>
+</div>
+
+
+<div id="metadata_container">
+    <h1>creditcards</h1>
+    <table id="creditcards_table" class="table table-striped">
+        <thead>
+            <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>id</td> <td>varchar(20)</td> </tr>
+            <tr> <td>firstName</td> <td>varchar(50)</td> </tr>
+            <tr> <td>lastName</td> <td>varchar(50)</td> </tr>
+            <tr> <td>expiration</td> <td>date</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>customers</h1>
+    <table id="customers_table" class="table table-striped">
+        <thead>
+            <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>id</td> <td>integer</td> </tr>
+            <tr> <td>firstName</td> <td>varchar(50)</td> </tr>
+            <tr> <td>lastName</td> <td>varchar(50)</td> </tr>
+            <tr> <td>ccId</td> <td>varchar(20)</td> </tr>
+            <tr> <td>address</td> <td>varchar(200)</td> </tr>
+            <tr> <td>email</td> <td>varchar(50)</td> </tr>
+            <tr> <td>password</td> <td>varchar(20)</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>employees</h1>
+    <table id="employees_table" class="table table-striped">
+        <thead>
+            <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>email</td> <td>varchar(50)</td> </tr>
+            <tr> <td>password</td> <td>varchar(20)</td> </tr>
+            <tr> <td>fullname</td> <td>varchar(100)</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>genres</h1>
+    <table id="genres_table" class="table table-striped">
+        <thead>
+        <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>id</td> <td>integer</td> </tr>
+            <tr> <td>name</td> <td>varchar(32)</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>genres_in_movies</h1>
+    <table id="genres_in_movies_table" class="table table-striped">
+        <thead>
+            <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>genreId</td> <td>integer</td> </tr>
+            <tr> <td>movieId</td> <td>varchar(10)</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>movies</h1>
+    <table id="movies_table" class="table table-striped">
+        <thead>
+            <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>id</td> <td>varchar(10)</td> </tr>
+            <tr> <td>title</td> <td>varchar(100)</td> </tr>
+            <tr> <td>year</td> <td>integer</td> </tr>
+            <tr> <td>director</td> <td>varchar(100)</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>ratings</h1>
+    <table id="ratings_table" class="table table-striped">
+        <thead>
+            <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>movieId</td> <td>varchar(10)</td> </tr>
+            <tr> <td>rating</td> <td>float</td> </tr>
+            <tr> <td>numVotes</td> <td>integer</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>sales</h1>
+    <table id="sales_table" class="table table-striped">
+        <thead>
+        <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>id</td> <td>integer</td> </tr>
+            <tr> <td>customerId</td> <td>integer</td> </tr>
+            <tr> <td>movieId</td> <td>varchar(10)</td> </tr>
+            <tr> <td>quantity</td> <td>int</td> </tr>
+            <tr> <td>saleDate</td> <td>date</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>stars</h1>
+    <table id="stars_table" class="table table-striped">
+        <thead>
+            <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>id</td> <td>varchar(10)</td> </tr>
+            <tr> <td>name</td> <td>varchar(100)</td> </tr>
+            <tr> <td>birthYear</td> <td>integer</td> </tr>
+        </tbody>
+    </table>
+
+    <h1>stars_in_movies</h1>
+    <table id="stars_in_movies_table" class="table table-striped">
+        <thead>
+            <tr> <th>Attribute</th> <th>Type</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>starId</td> <td>varchar(10)</td> </tr>
+            <tr> <td>movieId</td> <td>varchar(10)</td> </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

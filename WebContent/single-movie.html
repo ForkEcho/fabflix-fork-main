@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <title>Single Movie</title>
+
+    <!-- CSS -->
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>
+    <link href="styles/styles.css" rel="stylesheet"/>
+    <link href="styles/single-movie.css" rel="stylesheet"/>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js" defer></script>
+    <script src="scripts/single-movie.js" defer></script>
+    <script src="scripts/search.js" defer></script>
+
+</head>
+<body>
+<div id="main-nav">
+    <h1 id="main-title">Fablix</h1>
+    <div id="anchor-div">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="movie-list.html">Top Rated Movies</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    <form id="fulltext-input-div">
+        <label><input class="autocomplete" name="fulltext-title" placeholder="Enter Fulltext Title"/></label>
+        <button>Submit</button>
+    </form>
+</div>
+
+<div id="container">
+    <h1 id="movie_title"></h1>
+    <a id="dynamic-back">Back to Movie List Page</a>
+    <div id="movie_div">
+        <div id="movie_year"><p>Year:</p></div>
+        <div id="movie_director"><p>Director:</p><ul id="director_list"></ul></div>
+        <div id="genres"><p>Genres:</p><ul id="genre_list"></ul></div>
+        <div id="stars"><p>Stars:</p><ul id="star_list"></ul></div>
+        <div id="movie_rating"><p>Rating:</p></div>
+    </div>
+    <button class="btn btn-primary" id="add_to_cart_button" type="button">Add to Cart</button>
+</div>
+</body>
+</html>

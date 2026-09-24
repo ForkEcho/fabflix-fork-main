@@ -1,0 +1,113 @@
+:root {
+    --dark-background: #1f2937;
+    --dark-text: #f9faf8;
+    --dark-secondary-text: #e5e7eb;
+
+    --light-background: #f9faf8;
+
+
+    --button-color: #3882f6;
+
+}
+
+body {
+    background-color: white;
+    color: black;
+    margin: 24px;
+}
+
+#container {
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 80px;
+}
+
+/*NavBar*/
+#main-nav {
+    width: 100%;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    align-items: center;
+    background-color: #1f2937;
+    color: #f9faf8;
+}
+
+#main-nav #main-title {
+    position: absolute;
+    left: 5%;
+}
+
+#main-nav #anchor-div {
+    position: absolute;
+    left: 15%;
+    display: flex;
+    gap: 20px;
+}
+
+#input-div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-nav #fulltext-input-div {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    gap: 20px;
+}
+
+#search-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 24px;
+}
+
+#fulltext-input-div input {
+    width: 300px;
+    padding: 2px 2px 2px 6px;
+}
+
+#fulltext-input-div input, #input-div input {
+    padding-left: 8px;
+    border-radius: 4px;
+}
+
+.cart_action:hover {
+    background-color: white;
+    border: black solid;
+    color: black;
+}
+
+.autocomplete-suggestions {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    overflow-y: auto;
+}
+
+.autocomplete-suggestion {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.autocomplete-selected {
+    background-color: #f5f5f5;
+}
+
+.autocomplete-suggestion strong {
+    color: #0275d8;
+    font-weight: bold;
+}
